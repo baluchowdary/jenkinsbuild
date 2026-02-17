@@ -8,7 +8,7 @@ EXPOSE 9090
 WORKDIR /kollu
 
 # 3. Copy your JAR from your local target folder into the container
-COPY target/jenkinsbuild-0.0.1-SNAPSHOT.jar jenkinsbuild-0.0.1-SNAPSHOT.jar
+COPY target/jenkinsbuild-0.0.1-SNAPSHOT.jar /kollu
 
 # 4. Run the application using the Java 21 binary provided by the 'FROM' tag
 ENTRYPOINT ["java", "-jar", "jenkinsbuild-0.0.1-SNAPSHOT.jar"]
